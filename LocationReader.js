@@ -22,6 +22,10 @@ app.get("/i!aM@aDm1n", (req, res) => {
   res.send(adminPage.toString());
 });
 
+app.get("*", (req, res) => {
+  res.send("Page Not Found!!");
+});
+
 io.on('connection', socket => {
   socket.on('check', pw => {
     if (pw === "jUst4dmIn!h14") {

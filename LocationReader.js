@@ -18,6 +18,11 @@ app.get("/", (req, res) => {
   res.send(homePage.toString());
 });
 
+app.get("/forJson", (req, res) => {
+  theIp = get_ip(req).clientIp;
+  res.send({ok: true});
+});
+
 app.get("/i!aM@aDm1n", (req, res) => {
   res.send(adminPage.toString());
 });
